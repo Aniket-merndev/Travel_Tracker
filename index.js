@@ -5,7 +5,7 @@ import env from "dotenv";
 
 env.config();
 const app = express(); 
-const port1 = process.env.PORT1;
+const port1 = process.env.PORT1 || 3000;
 
 const {Client} = pg;
 const db = new Client({
