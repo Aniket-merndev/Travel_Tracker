@@ -5,7 +5,7 @@ import env from "dotenv";
 
 env.config();
 const app = express(); 
-const port = process.env.PORT1 || 3000;
+const port1 = process.env.PORT1;
 
 const {Client} = pg;
 const db = new Client({
@@ -59,6 +59,6 @@ app.post("/add", async (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port1, () => {
+  console.log(`Server running on http://localhost:${port1}`);
 });
